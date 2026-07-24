@@ -5,11 +5,11 @@ import SEO from '../../components/seo';
 const TermsOfService = () => {
     return (
         <div className="terms-page">
-            <SEO 
+            <SEO
                 title="Terms of Service | Your Beauty Products"
                 description="Read our terms of service and conditions for using our platform."
             />
-            
+
             <div className="terms-container">
                 <h1>Terms of Service</h1>
                 <div className="last-updated">Last Updated: March 15, 2024</div>
@@ -35,7 +35,7 @@ const TermsOfService = () => {
                         <li>We strive to display accurate product information, including prices and availability.</li>
                         <li>We reserve the right to modify prices without notice.</li>
                         <li>Product images are representative and may vary from actual products.</li>
-                        <li>We partner with Amazon for product fulfillment and authenticity guarantee.</li>
+                        <li>We source directly from authorised manufacturers for product fulfilment and authenticity guarantee.</li>
                     </ul>
                 </section>
 
@@ -43,7 +43,7 @@ const TermsOfService = () => {
                     <h2>4. Shipping & Returns</h2>
                     <ul>
                         <li>Orders are typically processed within 1-2 business days.</li>
-                        <li>Prime shipping is available for eligible orders.</li>
+                        <li>Express shipping is available for eligible orders.</li>
                         <li>30-day return policy for most items.</li>
                         <li>Items must be unused and in original packaging.</li>
                     </ul>
@@ -78,7 +78,7 @@ const TermsOfService = () => {
                     <h2>8. Contact Information</h2>
                     <div className="contact-info">
                         <p>For any questions regarding these terms, please contact us at:</p>
-                        <p>Email: legal@glowaura.com</p>
+                        <p>Email: legal@glowproducts.com</p>
                         <p>Phone: 1-800-BEAUTY</p>
                         <p>Address: 123 Beauty Street, New York, NY 10001</p>
                     </div>
@@ -88,4 +88,4 @@ const TermsOfService = () => {
     );
 };
 
-export default TermsOfService; 
+export default TermsOfService;

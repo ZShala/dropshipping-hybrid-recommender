@@ -1,0 +1,82 @@
+{
+  "content": {
+    "method": "content",
+    "n_requests": 100,
+    "latency_ms": {
+      "median": 1.051999999617692,
+      "mean": 1.09117200030596,
+      "p95": 1.3280949962791055,
+      "min": 0.9296000062022358,
+      "max": 1.5778000088175759
+    },
+    "concurrent": {
+      "requests": 50,
+      "threads": 4,
+      "wall_sec": 0.04461890000675339,
+      "req_per_sec": 1120.6013593439582
+    },
+    "avg_results_returned": 4.0,
+    "empty_result_rate": 0.0,
+    "process_rss_mb": 157.14453125
+  },
+  "collaborative": {
+    "method": "collaborative",
+    "n_requests": 100,
+    "latency_ms": {
+      "median": 0.5660000024363399,
+      "mean": 0.5807249998906627,
+      "p95": 0.9030150031321682,
+      "min": 0.32529998861718923,
+      "max": 1.151499993284233
+    },
+    "concurrent": {
+      "requests": 50,
+      "threads": 4,
+      "wall_sec": 0.017128899999079295,
+      "req_per_sec": 2919.0432545398467
+    },
+    "avg_results_returned": 3.9,
+    "empty_result_rate": 0.02,
+    "process_rss_mb": 137.26171875
+  },
+  "trend": {
+    "method": "trend",
+    "n_requests": 100,
+    "latency_ms": {
+      "median": 26.470600001630373,
+      "mean": 26.21426400000928,
+      "p95": 28.453269995952724,
+      "min": 0.006599992047995329,
+      "max": 33.4794999944279
+    },
+    "concurrent": {
+      "requests": 50,
+      "threads": 4,
+      "wall_sec": 0.3695111999986693,
+      "req_per_sec": 135.31389576332208
+    },
+    "avg_results_returned": 4.0,
+    "empty_result_rate": 0.0,
+    "process_rss_mb": 137.4609375
+  },
+  "hybrid": {
+    "method": "hybrid",
+    "n_requests": 100,
+    "latency_ms": {
+      "median": 34.36859999783337,
+      "mean": 34.02879100016435,
+      "p95": 40.35588000915595,
+      "min": 2.9476000054273754,
+      "max": 56.87849999230821
+    },
+    "concurrent": {
+      "requests": 50,
+      "threads": 4,
+      "wall_sec": 0.46644129999913275,
+      "req_per_sec": 107.1946244899261
+    },
+    "avg_results_returned": 4.0,
+    "empty_result_rate": 0.0,
+    "process_rss_mb": 156.30859375
+  }
+}

@@ -53,7 +53,6 @@ const CategoryProducts = ({ categoryType }) => {
         try {
             const category = categoryType.toLowerCase();
             if (!categories.includes(category)) {
-                console.warn(`Kategoria '${category}' nuk ekziston`);
                 return;
             }
 
@@ -61,7 +60,6 @@ const CategoryProducts = ({ categoryType }) => {
             setError(null);
 
             const url = `http://localhost:5001/api/${category}`;
-            console.log('Fetching products from:', url);
 
             const response = await fetch(url, {
                 method: 'GET',
@@ -71,9 +69,7 @@ const CategoryProducts = ({ categoryType }) => {
                 }
             });
 
-            console.log('Response status:', response.status);
             const data = await response.json();
-            console.log('Response data:', data);
 
             if (data && data.products && data.products.length > 0) {
                 const products = data.products;
@@ -192,7 +188,7 @@ const CategoryProducts = ({ categoryType }) => {
         });
     };
 
-    // Përditësojmë filtrimin kur ndryshon tipi i zgjedhur
+    // Update the filtering when the selected type changes
     useEffect(() => {
         if (allProducts.length > 0) {
             const filtered = allProducts.filter(p => filterProductByType(p, selectedType));
@@ -200,7 +196,7 @@ const CategoryProducts = ({ categoryType }) => {
         }
     }, [selectedType, allProducts, page]);
 
-    // Përditësojmë loadMore për të përdorur produktet e filtruara
+    // Update loadMore to use the filtered products
     const loadMore = () => {
         const nextPage = page + 1;
         const filteredProducts = allProducts.filter(p => filterProductByType(p, selectedType));
@@ -211,14 +207,14 @@ const CategoryProducts = ({ categoryType }) => {
         setPage(nextPage);
     };
 
-    // Përditësojmë hasMore për të përdorur produktet e filtruara
+    // Update hasMore to use the filtered products
     const hasMore = displayedProducts.length <
         allProducts.filter(p => filterProductByType(p, selectedType)).length;
 
-    // Përditësojmë filteredProducts
+    // Update filteredProducts
     const filteredProducts = displayedProducts;
 
-    // Shtojmë një efekt për të pastruar cache-in e vjetër
+    // Add an effect to clear the old cache
     useEffect(() => {
         const cleanOldCache = () => {
             try {
@@ -227,7 +223,7 @@ const CategoryProducts = ({ categoryType }) => {
                     const key = localStorage.key(i);
                     if (key.startsWith('products_')) {
                         const cached = JSON.parse(localStorage.getItem(key));
-                        if (now - cached.timestamp > 3600000) { // 1 orë
+                        if (now - cached.timestamp > 3600000) { // 1 hour
                             localStorage.removeItem(key);
                         }
                     }
@@ -302,7 +298,7 @@ const CategoryProducts = ({ categoryType }) => {
             }
         });
 
-        // Kthejmë array të sortuar, me "All Products" në fillim
+        // Return the sorted array, with "All Products" first
         const groupedArray = Array.from(grouped.values());
         const allProducts = groupedArray.find(g => g.name === 'All Products');
         const otherGroups = groupedArray.filter(g => g.name !== 'All Products')
@@ -317,7 +313,7 @@ const CategoryProducts = ({ categoryType }) => {
                 const response = await fetch('http://localhost:5001/api/makeup');
                 const data = await response.json();
                 if (data.products) {
-                    console.log('Backend connection successful');
+                    // Backend connection successful
                 }
             } catch (err) {
                 console.error('Backend connection failed:', err);

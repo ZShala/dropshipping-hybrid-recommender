@@ -113,7 +113,6 @@ def get_category_products_endpoint(category_type):
                 "total": 0
             }), 404
 
-        print(f"Duke kërkuar produktet për kategorinë: {category}")
         engine = get_db()
         page = request.args.get('page', 1, type=int)
         per_page = request.args.get('per_page', 20, type=int)
@@ -123,7 +122,6 @@ def get_category_products_endpoint(category_type):
         print("Query result:", result)
         
         if not result or not result.get('products'):
-            print(f"Nuk u gjetën produkte për kategorinë: {category}")
             return jsonify({
                 "message": f"No products found for category: {category}", 
                 "products": [],
@@ -136,7 +134,7 @@ def get_category_products_endpoint(category_type):
         return jsonify(result)
         
     except Exception as e:
-        print(f"Error në /category endpoint: {str(e)}")
+        print(f"Error in /category endpoint: {str(e)}")
         import traceback
         traceback.print_exc()
         return jsonify({
@@ -180,7 +178,7 @@ def serve_image(filename):
 def get_products(category):
     if category.lower() not in VALID_CATEGORIES:
         return jsonify({
-            'error': 'Kategoria nuk u gjet',
+            'error': 'Category not found',
             'message': f'No products found for category: {category}'
         }), 404
     
@@ -189,7 +187,7 @@ def get_products(category):
         result = get_category_products(engine, category)
         return jsonify(result)
     except Exception as e:
-        print(f"Error në /products endpoint: {str(e)}")
+        print(f"Error in /products endpoint: {str(e)}")
         return jsonify({
             "error": str(e),
             "products": [],
@@ -198,4 +196,4 @@ def get_products(category):
 
 if __name__ == '__main__':
     engine = get_db()
-    app.run(debug=True, host='0.0.0.0', port=5001)
+    app.run(debug=False, host='0.0.0.0', port=5001)

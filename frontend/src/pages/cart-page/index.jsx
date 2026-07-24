@@ -8,7 +8,7 @@ const CartPage = () => {
         <>
             <SEO 
                 title="Shopping Cart | Your Beauty Products"
-                description="Review your shopping cart of premium beauty products. Secure checkout with Amazon protection and fast Prime shipping."
+                description="Review your shopping cart of premium beauty products. Secure checkout with Buyer Protection and fast Express shipping."
             />
             <div className="cart-page">
                 <Cart />

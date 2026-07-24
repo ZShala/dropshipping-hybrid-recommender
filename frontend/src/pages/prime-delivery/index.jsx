@@ -6,15 +6,15 @@ import { FaTruck, FaClock, FaMapMarkedAlt, FaBox, FaShieldAlt } from 'react-icon
 const PrimeDelivery = () => {
     return (
         <div className="prime-delivery-page">
-            <SEO 
-                title="Prime Delivery 2-5 Days | Your Beauty Products"
-                description="Learn about our fast Prime delivery service and shipping benefits."
+            <SEO
+                title="Express Delivery 2-5 Days | Your Beauty Products"
+                description="Learn about our fast Express delivery service and shipping benefits."
             />
-            
+
             <div className="prime-delivery-container">
                 <div className="hero-section">
                     <FaTruck className="prime-icon" />
-                    <h1>Prime Delivery</h1>
+                    <h1>Express Delivery</h1>
                     <p>Fast, Free Shipping on Orders Over $25</p>
                     <div className="delivery-time">2-5 Business Days</div>
                 </div>
@@ -43,7 +43,7 @@ const PrimeDelivery = () => {
                 </div>
 
                 <section className="delivery-info-section">
-                    <h2>Prime Delivery Benefits</h2>
+                    <h2>Express Delivery Benefits</h2>
                     <div className="benefits-grid">
                         <div className="benefit">
                             <h3>Fast & Reliable</h3>
@@ -84,7 +84,7 @@ const PrimeDelivery = () => {
                             </div>
                             <div className="timeline-content">
                                 <h4>Processing</h4>
-                                <p>Order picked and packed at Amazon warehouse</p>
+                                <p>Order picked and packed at our fulfilment centre</p>
                             </div>
                         </div>
                         <div className="timeline-item">
@@ -113,7 +113,7 @@ const PrimeDelivery = () => {
                     <div className="rates-grid">
                         <div className="rate-card">
                             <div className="rate-header">
-                                <h3>Prime Shipping</h3>
+                                <h3>Express Shipping</h3>
                                 <div className="price">FREE</div>
                             </div>
                             <ul>
@@ -156,7 +156,7 @@ const PrimeDelivery = () => {
                     <div className="contact-methods">
                         <div className="contact-method">
                             <i className="fas fa-envelope"></i>
-                            <p>Email: shipping@glowaura.com</p>
+                            <p>Email: shipping@glowproducts.com</p>
                         </div>
                         <div className="contact-method">
                             <i className="fas fa-phone"></i>
@@ -169,4 +169,4 @@ const PrimeDelivery = () => {
     );
 };
 
-export default PrimeDelivery; 
+export default PrimeDelivery;

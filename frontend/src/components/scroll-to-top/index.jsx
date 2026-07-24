@@ -6,7 +6,7 @@ const ScrollToTop = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [pathname]);  // Do ekzekutohet sa herë që ndryshon pathname
+    }, [pathname]);  // Runs every time the pathname changes
 
     return null;
 };

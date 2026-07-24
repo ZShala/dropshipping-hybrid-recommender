@@ -6,7 +6,7 @@ const Miscellaneous = () => {
         <>
             <SEO
                 title="Miscellaneous Products | Luxury Beauty Collection"
-                description="Discover luxury beauty products for radiant, healthy skin. Shop cleansers, moisturizers, serums and treatments with Amazon Prime shipping."
+                description="Discover luxury beauty products for radiant, healthy skin. Shop cleansers, moisturizers, serums and treatments with Express shipping."
             />
             <div>
                 <CategoryProducts categoryType="miscellaneous" />

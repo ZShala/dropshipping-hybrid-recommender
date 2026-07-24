@@ -7,7 +7,7 @@ const Haircare = () => {
         <>
             <SEO 
                 title="Hair Care Products | Professional Hair Solutions"
-                description="Shop professional haircare products from Amazon. Find shampoos, conditioners, treatments and styling products with Prime delivery."
+                description="Shop professional haircare products from top brands. Find shampoos, conditioners, treatments and styling products with Express delivery."
             />
             <div>
                 <CategoryProducts categoryType="haircare" />

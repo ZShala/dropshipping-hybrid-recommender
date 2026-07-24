@@ -7,7 +7,7 @@ const Makeup = () => {
         <>
             <SEO 
                 title="Makeup Products | Premium Cosmetics Collection"
-                description="Shop premium makeup and cosmetics from top Amazon brands. Find lipsticks, mascaras, foundations and more with fast Prime delivery."
+                description="Shop premium makeup and cosmetics from top brands. Find lipsticks, mascaras, foundations and more with fast Express delivery."
             />
             <div>
                 <CategoryProducts categoryType="makeup" />

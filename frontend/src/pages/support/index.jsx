@@ -7,11 +7,11 @@ import { FaHeadset, FaEnvelope, FaPhone, FaComments, FaWhatsapp, FaClock, FaGlob
 const Support = () => {
     return (
         <div className="support-page">
-            <SEO 
+            <SEO
                 title="24/7 Customer Support | Your Beauty Products"
                 description="Get help anytime with our 24/7 customer support service."
             />
-            
+
             <div className="support-container">
                 <div className="hero-section">
                     <FaHeadset className="support-icon" />
@@ -30,7 +30,7 @@ const Support = () => {
                     <div className="method-card">
                         <FaEnvelope />
                         <h3>Email Support</h3>
-                        <p>support@glowaura.com</p>
+                        <p>support@glowproducts.com</p>
                         <span className="availability">Response within 2 hours</span>
                         <button className="contact-button">Send Email</button>
                     </div>
@@ -131,11 +131,11 @@ const Support = () => {
                         </div>
                         <div className="faq-item">
                             <h3>How long does shipping take?</h3>
-                            <p>Prime shipping takes 2-5 business days. Standard shipping takes 5-7 business days.</p>
+                            <p>Express shipping takes 2-5 business days. Standard shipping takes 5-7 business days.</p>
                         </div>
                         <div className="faq-item">
                             <h3>Are your products authentic?</h3>
-                            <p>Yes, all our products are 100% authentic and sourced directly through Amazon's verified channels.</p>
+                            <p>Yes, all our products are 100% authentic and sourced directly through verified channels.</p>
                         </div>
                     </div>
                     <div className="view-more">
@@ -166,4 +166,4 @@ const Support = () => {
     );
 };
 
-export default Support; 
+export default Support;

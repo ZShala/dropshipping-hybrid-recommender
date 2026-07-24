@@ -7,7 +7,7 @@ const Skincare = () => {
         <>
             <SEO 
                 title="Skincare Products | Luxury Skincare Collection"
-                description="Discover luxury skincare products for radiant, healthy skin. Shop cleansers, moisturizers, serums and treatments with Amazon Prime shipping."
+                description="Discover luxury skincare products for radiant, healthy skin. Shop cleansers, moisturizers, serums and treatments with Express shipping."
             />
             <div>
                 <CategoryProducts categoryType="skincare" />

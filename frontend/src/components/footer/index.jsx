@@ -12,10 +12,10 @@ const Footer = () => {
             <div className="footer-content">
                 <div className="footer-section">
                     <h3>About Us</h3>
-                    <p>We partner with Amazon to bring you premium beauty products with fast Prime shipping and authentic product guarantee.</p>
+                    <p>We source directly from authorised manufacturers to bring you premium beauty products with fast Express shipping and an authentic product guarantee.</p>
                     <div className="amazon-partnership">
-                        <i className="fab fa-amazon"></i>
-                        <span>Official Amazon Partner</span>
+                        <i className="fas fa-shield-alt"></i>
+                        <span>Curated Beauty Marketplace</span>
                     </div>
                 </div>
 
@@ -50,11 +50,11 @@ const Footer = () => {
                     <ul>
                         <li>
                             <i className="fas fa-check-circle"></i>
-                            <Link to="/authentic">Authentic Amazon Products</Link>
+                            <Link to="/authentic">Authentic Products</Link>
                         </li>
                         <li>
                             <i className="fas fa-truck-fast"></i>
-                            <Link to="/prime-delivery">Prime Delivery 2-5 Days</Link>
+                            <Link to="/prime-delivery">Express Delivery 2-5 Days</Link>
                         </li>
                         <li>
                             <i className="fas fa-shield-alt"></i>
@@ -94,8 +94,8 @@ const Footer = () => {
             <div className="footer-bottom">
                 <div className="trust-badges">
                     <div className="badge">
-                        <i className="fab fa-amazon"></i>
-                        Amazon Prime Partner
+                        <i className="fas fa-truck"></i>
+                        Fast, Free Shipping
                     </div>
                     <div className="badge">
                         <i className="fas fa-shield-alt"></i>
@@ -107,7 +107,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="copyright">
-                    <p>&copy; 2025 GlowAura. All rights reserved. Not affiliated with Amazon.com</p>
+                    <p>&copy; 2025 GlowProducts. All rights reserved. Not affiliated with Amazon.com</p>
                     <div className="legal-links">
                         <Link to="/privacy">Privacy Policy</Link>
                         <Link to="/terms">Terms of Service</Link>

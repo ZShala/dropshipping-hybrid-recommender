@@ -6,11 +6,11 @@ import { FaBox, FaTruck, FaMoneyBillWave, FaShieldAlt } from 'react-icons/fa';
 const Returns = () => {
     return (
         <div className="returns-page">
-            <SEO 
+            <SEO
                 title="Returns & Refunds | Your Beauty Products"
                 description="Learn about our returns and refunds policy for beauty products."
             />
-            
+
             <div className="returns-container">
                 <h1>Returns & Refunds</h1>
                 <div className="last-updated">Last Updated: March 15, 2024</div>
@@ -41,7 +41,7 @@ const Returns = () => {
                 <section className="returns-section">
                     <h2>Return Policy</h2>
                     <p>We want you to be completely satisfied with your purchase. If you're not happy with your order, we accept returns within 30 days of delivery for a full refund.</p>
-                    
+
                     <h3>Eligible Items</h3>
                     <ul>
                         <li>Items must be unused and in original packaging</li>
@@ -103,7 +103,7 @@ const Returns = () => {
                     <div className="contact-methods">
                         <div className="contact-method">
                             <i className="fas fa-envelope"></i>
-                            <p>Email: returns@glowaura.com</p>
+                            <p>Email: returns@glowproducts.com</p>
                         </div>
                         <div className="contact-method">
                             <i className="fas fa-phone"></i>
@@ -116,4 +116,4 @@ const Returns = () => {
     );
 };
 
-export default Returns; 
+export default Returns;

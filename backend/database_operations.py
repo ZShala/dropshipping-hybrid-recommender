@@ -41,7 +41,7 @@ product_cache = {}
 cache_duration = timedelta(hours=1)
 
 def get_cached_product(product_id):
-    """Merr produktin nga cache"""
+    """Get the product from cache."""
     if product_id in product_cache:
         cached_data, timestamp = product_cache[product_id]
         if datetime.now() - timestamp < cache_duration:
@@ -50,7 +50,7 @@ def get_cached_product(product_id):
     return None
 
 def set_cached_product(product_id, data):
-    """Ruan produktin në cache"""
+    """Store the product in cache."""
     product_cache[product_id] = (data, datetime.now())
 
 def setup_database(engine):
@@ -133,7 +133,6 @@ def get_data_from_db(engine):
                 p.ProductId, 
                 p.ProductType, 
                 ab.Rating, 
-                p.URL,
                 COUNT(*) OVER (PARTITION BY p.ProductId) as review_count,
                 AVG(ab.Rating) OVER (PARTITION BY p.ProductId) as avg_rating
             FROM products p
@@ -150,7 +149,7 @@ def get_data_from_db(engine):
         with engine.connect() as conn:
             result = conn.execute(query)
             df = pd.DataFrame(result.fetchall(), 
-                            columns=['ProductId', 'ProductType', 'Rating', 'URL', 'ReviewCount', 'AvgRating'])
+                            columns=['ProductId', 'ProductType', 'Rating', 'ReviewCount', 'AvgRating'])
             return df
     
     except Exception as e:
@@ -173,9 +172,9 @@ def timed_lru_cache(seconds: int, maxsize: int = 128):
         return wrapped_func
     return wrapper_decorator
 
-@timed_lru_cache(seconds=3600, maxsize=1000)  # Cache zgjat 1 orë
+@timed_lru_cache(seconds=3600, maxsize=1000)  # Cache lasts 1 hour
 def get_product_details(engine, product_id):
-    """Merr detajet e produktit nga databaza me caching"""
+    """Get product details from the database, with caching."""
     try:
         cached_product = get_cached_product(product_id)
         if cached_product:
@@ -186,7 +185,6 @@ def get_product_details(engine, product_id):
                 p.ProductId,
                 p.ProductType,
                 p.ProductTitle,
-                p.URL,
                 p.ImageURL,
                 p.price,
                 ROUND(COALESCE(AVG(ab.Rating), 0), 1) as avg_rating,
@@ -198,7 +196,7 @@ def get_product_details(engine, product_id):
             LEFT JOIN amazon_beauty ab ON p.ProductId = ab.ProductId
             WHERE p.ProductId = :product_id
                 AND p.price > 0
-            GROUP BY p.ProductId, p.ProductType, p.ProductTitle, p.URL, p.ImageURL, p.price
+            GROUP BY p.ProductId, p.ProductType, p.ProductTitle, p.ImageURL, p.price
         """)
 
         with engine.connect() as conn:
@@ -209,7 +207,6 @@ def get_product_details(engine, product_id):
                     "ProductId": result.ProductId,
                     "ProductType": result.ProductTitle or result.ProductType,
                     "Rating": float(result.avg_rating),
-                    "URL": result.URL,
                     "ReviewCount": result.review_count,
                     "ImageURL": result.ImageURL or "http://localhost:5001/static/images/product-placeholder.jpg",
                     "price": float(result.price) if result.price else 0.0,
@@ -221,7 +218,7 @@ def get_product_details(engine, product_id):
                     "currency": "EUR"
                 }
 
-                # Ruaj në cache
+                # Store in cache
                 set_cached_product(product_id, product)
                 return product
 
@@ -236,7 +233,7 @@ def get_category_products(engine, category_type, page=1, per_page=None):
         search_terms = CATEGORY_MAPPING.get(category_type.lower(), [])
         
         if not search_terms:
-            print(f"Nuk u gjetën terma kërkimi për kategorinë: {category_type}")
+            print(f"No search terms found for category: {category_type}")
             return {"products": [], "total": 0, "page": page, "per_page": per_page, "total_pages": 0}
 
         conditions = " OR ".join([
@@ -251,22 +248,13 @@ def get_category_products(engine, category_type, page=1, per_page=None):
                 prod.ProductTitle,
                 prod.ImageURL,
                 prod.price,
-                prod.URL,
-                ROUND(COALESCE(AVG(ab.Rating), 0), 1) as avg_rating,
-                COUNT(ab.Rating) as review_count
+                ROUND(ps.avg_rating, 1) as avg_rating,
+                ps.review_count as review_count
             FROM products prod
-            LEFT JOIN amazon_beauty ab ON prod.ProductId = ab.ProductId
+            JOIN product_stats ps ON ps.ProductId = prod.ProductId
             WHERE ({conditions})
-                AND prod.ProductId IS NOT NULL
                 AND prod.price > 0
-            GROUP BY 
-                prod.ProductId, 
-                prod.ProductType,
-                prod.ProductTitle,
-                prod.ImageURL,
-                prod.price,
-                prod.URL
-            HAVING review_count > 0
+                AND ps.review_count > 0
             ORDER BY avg_rating DESC, review_count DESC
         """)
 
@@ -293,7 +281,6 @@ def get_category_products(engine, category_type, page=1, per_page=None):
                         "ProductType": row.ProductType,
                         "ProductTitle": row.ProductTitle or row.ProductType,
                         "Rating": float(row.avg_rating),
-                        "URL": row.URL,
                         "ReviewCount": row.review_count,
                         "ImageURL": image_url,
                         "price": float(row.price) if row.price else 0.0,
@@ -382,5 +369,4 @@ def check_and_insert_product(engine, product_data):
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqlconnector://root:mysqlZ97*@localhost/dataset_db')
-    setup_database(engine)  
-    test_product_insertion(engine) 
+    setup_database(engine) 

@@ -25,21 +25,21 @@ const LandingPage = () => {
     return (
         <>
             <SEO 
-                title="Beauty Products | Premium Amazon Beauty Collection"
-                description="Discover our curated collection of premium Amazon beauty products. Shop makeup, skincare, haircare and fragrances with Prime shipping."
+                title="Beauty Products | Premium Beauty Collection"
+                description="Discover our curated collection of premium beauty products. Shop makeup, skincare, haircare and fragrances with Express shipping."
             />
             
             <div className="landing-page">
                 <section className="hero-section">
                     <div className="hero-content">
                         <h1>Premium Beauty Products</h1>
-                        <p>Discover Amazon's Best Beauty Products with Prime Shipping</p>
+                        <p>Discover Our Best Beauty Products with Express Shipping</p>
                         <div className="hero-badges">
                             <div className="badge">
-                                <span>Amazon Direct</span>
+                                <span>Shipped Direct</span>
                             </div>
                             <div className="badge">
-                                <span>Prime Delivery</span>
+                                <span>Express Delivery</span>
                             </div>
                             <div className="badge">
                                 <span>Secure Shopping</span>
@@ -51,18 +51,18 @@ const LandingPage = () => {
                 <section className="features-section">
                     <div className="feature-card">
                         <FaAward />
-                        <h3>Amazon's Choice</h3>
+                        <h3>Top Pick</h3>
                         <p>Handpicked premium products</p>
                     </div>
                     <div className="feature-card">
                         <FaTruck />
                         <h3>Fast Shipping</h3>
-                        <p>2-5 day Prime delivery</p>
+                        <p>2-5 day Express delivery</p>
                     </div>
                     <div className="feature-card">
                         <FaShieldAlt />
                         <h3>Secure Shopping</h3>
-                        <p>Protected by Amazon</p>
+                        <p>Buyer Protection</p>
                     </div>
                     <div className="feature-card">
                         <FaUndo />
@@ -80,16 +80,16 @@ const LandingPage = () => {
                     <h2>Why Choose Us</h2>
                     <div className="benefits-grid">
                         <div className="benefit-item">
-                            <h3>Amazon Direct</h3>
-                            <p>All products shipped directly from Amazon warehouses</p>
+                            <h3>Shipped Direct</h3>
+                            <p>All products shipped directly from our fulfilment centres</p>
                         </div>
                         <div className="benefit-item">
                             <h3>Authentic Products</h3>
-                            <p>100% genuine products with Amazon guarantee</p>
+                            <p>100% genuine products with our guarantee</p>
                         </div>
                         <div className="benefit-item">
                             <h3>Best Prices</h3>
-                            <p>Competitive prices with regular Amazon deals</p>
+                            <p>Competitive prices with regular deals</p>
                         </div>
                     </div>
                 </section>
@@ -106,7 +106,7 @@ const LandingPage = () => {
                             <div className="number">
                                 <CounterAnimation end={10} suffix="K+" />
                             </div>
-                            <div className="label">Amazon Products</div>
+                            <div className="label">Curated Products</div>
                         </div>
                         <div className="trust-item">
                             <div className="number">
@@ -126,7 +126,7 @@ const LandingPage = () => {
                 <section className="cta-section">
                     <div className="cta-content">
                         <h2>Start Shopping Today</h2>
-                        <p>Browse our curated selection of Amazon beauty products</p>
+                        <p>Browse our curated selection of beauty products</p>
                         <button onClick={scrollToDirectory} className="cta-button">
                             Explore Products
                         </button>

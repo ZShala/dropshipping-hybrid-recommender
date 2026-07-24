@@ -5,11 +5,11 @@ import SEO from '../../components/seo';
 const PrivacyPolicy = () => {
     return (
         <div className="privacy-policy-page">
-            <SEO 
+            <SEO
                 title="Privacy Policy | Your Beauty Products"
                 description="Learn about how we collect, use, and protect your personal information."
             />
-            
+
             <div className="privacy-policy-container">
                 <h1>Privacy Policy</h1>
                 <div className="last-updated">Last Updated: March 15, 2024</div>
@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
                     <h2>3. Information Sharing</h2>
                     <p>We share your information with:</p>
                     <ul>
-                        <li>Amazon for order fulfillment</li>
+                        <li>Our fulfilment partners</li>
                         <li>Payment processors for secure transactions</li>
                         <li>Shipping partners for delivery</li>
                         <li>Service providers who assist our operations</li>
@@ -77,7 +77,7 @@ const PrivacyPolicy = () => {
                     <h2>6. Contact Us</h2>
                     <p>If you have any questions about this Privacy Policy, please contact us at:</p>
                     <div className="contact-info">
-                        <p>Email: privacy@glowaura.com</p>
+                        <p>Email: privacy@glowproducts.com</p>
                         <p>Phone: 1-800-BEAUTY</p>
                         <p>Address: 123 Beauty Street, New York, NY 10001</p>
                     </div>
@@ -87,4 +87,4 @@ const PrivacyPolicy = () => {
     );
 };
 
-export default PrivacyPolicy; 
+export default PrivacyPolicy;

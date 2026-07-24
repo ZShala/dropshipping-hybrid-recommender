@@ -22,7 +22,6 @@ const Cart = () => {
                 ...item,
                 price: typeof item.price === 'string' ? parseFloat(item.price) : (item.price || 29.99)
             }));
-            console.log('Cart Items:', itemsWithNumberPrices);
             setCartItems(itemsWithNumberPrices);
             calculateTotals(itemsWithNumberPrices);
             setLoading(false);
@@ -78,11 +77,11 @@ const Cart = () => {
                 <div className="amazon-badges">
                     <div className="badge">
                         <FaBox />
-                        <span>Amazon Direct</span>
+                        <span>Shipped Direct</span>
                     </div>
                     <div className="badge">
                         <FaTruck />
-                        <span>Prime Shipping</span>
+                        <span>Express Shipping</span>
                     </div>
                     <div className="badge">
                         <FaShieldAlt />
@@ -122,13 +121,13 @@ const Cart = () => {
                                         </div>
                                     </div>
                                     <div className="amazon-prime-info">
-                                        <i className="fab fa-amazon"></i>
-                                        Prime Delivery Available
+                                        <i className="fas fa-truck"></i>
+                                        Express Delivery Available
                                     </div>
                                     <div className="item-actions">
                                         <div className="price-info">
                                             <span className="price">${item.price.toFixed(2)}</span>
-                                            <span className="shipping">Free Prime Shipping</span>
+                                            <span className="shipping">Free Express Shipping</span>
                                         </div>
                                         
                                         <div className="quantity-controls">
@@ -171,7 +170,7 @@ const Cart = () => {
                                 <span>${subtotal.toFixed(2)}</span>
                             </div>
                             <div className="summary-row">
-                                <span>Prime Shipping:</span>
+                                <span>Express Shipping:</span>
                                 <span className="free">FREE</span>
                             </div>
                             <div className="summary-row">
@@ -194,7 +193,7 @@ const Cart = () => {
 
                         <div className="secure-checkout">
                             <FaShieldAlt />
-                            <p>Secure Checkout with Amazon</p>
+                            <p>Secure Checkout with Buyer Protection</p>
                         </div>
                     </div>
                 </div>

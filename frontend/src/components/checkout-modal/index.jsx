@@ -15,7 +15,7 @@ const CheckoutModal = ({ isOpen, onClose, total }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Order submitted:', formData);
+        // TODO: send order to backend
         onClose();
     };
 

@@ -10,11 +10,11 @@ const FAQ = () => {
         },
         {
             question: "What payment methods do you accept?",
-            answer: "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and Amazon Pay for secure transactions."
+            answer: "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and Card Payment for secure transactions."
         },
         {
             question: "How long does shipping take?",
-            answer: "With Amazon Prime, most orders are delivered within 2-5 business days. International shipping times may vary by location."
+            answer: "With Express delivery, most orders are delivered within 2-5 business days. International shipping times may vary by location."
         },
         {
             question: "What is your return policy?",
@@ -22,7 +22,7 @@ const FAQ = () => {
         },
         {
             question: "Are your products authentic?",
-            answer: "Yes, all our products are 100% authentic and sourced directly from authorized manufacturers or through Amazon's verified channels."
+            answer: "Yes, all our products are 100% authentic and sourced directly from authorized manufacturers or through verified channels."
         },
         {
             question: "Do you ship internationally?",
@@ -30,7 +30,7 @@ const FAQ = () => {
         },
         {
             question: "How can I track my order?",
-            answer: "Once your order ships, you'll receive a tracking number via email. You can use this to track your package on our website or through Amazon's tracking system."
+            answer: "Once your order ships, you'll receive a tracking number via email. You can use this to track your package on our website or through our tracking system."
         },
         {
             question: "Are the products cruelty-free?",
@@ -62,7 +62,7 @@ const FAQ = () => {
                     <div className="contact-methods">
                         <div className="contact-method">
                             <i className="fas fa-envelope"></i>
-                            <p>Email us at: support@glowaura.com</p>
+                            <p>Email us at: support@glowproducts.com</p>
                         </div>
                         <div className="contact-method">
                             <i className="fas fa-phone"></i>
@@ -75,4 +75,4 @@ const FAQ = () => {
     );
 };
 
-export default FAQ; 
+export default FAQ;

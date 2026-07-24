@@ -1,33 +1,33 @@
 import React from 'react';
 import './authentic.styles.scss';
 import SEO from '../../components/seo';
-import { FaCheckCircle, FaShieldAlt, FaAmazon, FaBoxOpen } from 'react-icons/fa';
+import { FaCheckCircle, FaShieldAlt, FaTruck, FaBoxOpen } from 'react-icons/fa';
 
 const AuthenticProducts = () => {
     return (
         <div className="authentic-page">
-            <SEO 
-                title="Authentic Amazon Products | Your Beauty Products"
-                description="Learn about our authentic product guarantee and partnership with Amazon."
+            <SEO
+                title="Authenticity Guarantee | Your Beauty Products"
+                description="Learn about our authentic product guarantee and sourcing standards."
             />
-            
+
             <div className="authentic-container">
                 <div className="hero-section">
-                    <FaAmazon className="amazon-icon" />
-                    <h1>Authentic Amazon Products</h1>
-                    <p>We partner directly with Amazon to ensure 100% authentic products</p>
+                    <FaShieldAlt className="amazon-icon" />
+                    <h1>Authenticity Guarantee</h1>
+                    <p>We source directly from authorised manufacturers to ensure 100% authentic products</p>
                 </div>
 
                 <div className="benefits-grid">
                     <div className="benefit-card">
                         <FaCheckCircle />
                         <h3>Guaranteed Authentic</h3>
-                        <p>All products are sourced directly from authorized manufacturers through Amazon's verified channels</p>
+                        <p>All products are sourced directly from authorized manufacturers through verified channels</p>
                     </div>
                     <div className="benefit-card">
                         <FaShieldAlt />
-                        <h3>Amazon Protection</h3>
-                        <p>Every purchase is protected by Amazon's A-to-Z Guarantee</p>
+                        <h3>Buyer Protection</h3>
+                        <p>Every purchase is protected by our satisfaction guarantee</p>
                     </div>
                     <div className="benefit-card">
                         <FaBoxOpen />
@@ -35,21 +35,21 @@ const AuthenticProducts = () => {
                         <p>Products arrive in original, unopened packaging</p>
                     </div>
                     <div className="benefit-card">
-                        <FaAmazon />
-                        <h3>Prime Benefits</h3>
-                        <p>Enjoy fast, free shipping with Amazon Prime</p>
+                        <FaTruck />
+                        <h3>Express Benefits</h3>
+                        <p>Enjoy fast, free shipping with Express Delivery</p>
                     </div>
                 </div>
 
                 <section className="info-section">
-                    <h2>Our Amazon Partnership</h2>
-                    <p>As an official Amazon partner, we maintain strict quality control standards to ensure every product you receive is genuine and meets Amazon's high-quality requirements.</p>
-                    
+                    <h2>Our Sourcing Standards</h2>
+                    <p>We source directly from authorised manufacturers, maintaining strict quality control standards to ensure every product you receive is genuine and meets our high-quality requirements.</p>
+
                     <div className="partnership-features">
                         <div className="feature">
                             <h3>Direct Sourcing</h3>
                             <ul>
-                                <li>Products sourced directly from Amazon's warehouses</li>
+                                <li>Products sourced directly from our fulfilment centres</li>
                                 <li>No third-party sellers or intermediaries</li>
                                 <li>Complete product traceability</li>
                                 <li>Original manufacturer warranty</li>
@@ -73,12 +73,12 @@ const AuthenticProducts = () => {
                         <div className="step">
                             <div className="step-number">1</div>
                             <h4>Check the Seal</h4>
-                            <p>Look for intact factory seals and Amazon's security labels</p>
+                            <p>Look for intact factory seals and manufacturer security labels</p>
                         </div>
                         <div className="step">
                             <div className="step-number">2</div>
                             <h4>Scan QR Code</h4>
-                            <p>Use Amazon app to scan product's authenticity QR code</p>
+                            <p>Use our app to scan product's authenticity QR code</p>
                         </div>
                         <div className="step">
                             <div className="step-number">3</div>
@@ -118,7 +118,7 @@ const AuthenticProducts = () => {
                     <div className="contact-methods">
                         <div className="contact-method">
                             <i className="fas fa-envelope"></i>
-                            <p>Email: authenticity@glowaura.com</p>
+                            <p>Email: authenticity@glowproducts.com</p>
                         </div>
                         <div className="contact-method">
                             <i className="fas fa-phone"></i>
@@ -131,4 +131,4 @@ const AuthenticProducts = () => {
     );
 };
 
-export default AuthenticProducts; 
+export default AuthenticProducts;

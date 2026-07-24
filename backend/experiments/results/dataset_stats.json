@@ -1,0 +1,17 @@
+{
+  "raw_rows": 1348246,
+  "interactions": 1348246,
+  "n_users": 883753,
+  "n_items": 23838,
+  "sparsity_pct": 99.99360017020487,
+  "train_interactions": 1289576,
+  "test_interactions": 58670,
+  "train_positives": 992357,
+  "test_positives": 45279,
+  "eligible_users": 28040,
+  "validation_split": false,
+  "eval_users": 23952,
+  "positive_threshold": 4.0,
+  "min_user_interactions": 5,
+  "test_fraction": 0.2
+}

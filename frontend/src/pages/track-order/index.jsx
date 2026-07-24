@@ -15,11 +15,11 @@ const TrackOrder = () => {
 
     return (
         <div className="track-order-page">
-            <SEO 
+            <SEO
                 title="Track Your Order | Your Beauty Products"
                 description="Track your order status and shipping information."
             />
-            
+
             <div className="track-order-container">
                 <h1>Track Your Order</h1>
                 <p className="subtitle">Enter your order details below</p>
@@ -112,7 +112,7 @@ const TrackOrder = () => {
                             <div className="details-grid">
                                 <div className="detail-item">
                                     <span className="label">Carrier:</span>
-                                    <span className="value">Amazon Logistics</span>
+                                    <span className="value">Express Courier</span>
                                 </div>
                                 <div className="detail-item">
                                     <span className="label">Tracking Number:</span>
@@ -120,7 +120,7 @@ const TrackOrder = () => {
                                 </div>
                                 <div className="detail-item">
                                     <span className="label">Service:</span>
-                                    <span className="value">Prime Shipping</span>
+                                    <span className="value">Express Shipping</span>
                                 </div>
                                 <div className="detail-item">
                                     <span className="label">Status:</span>
@@ -137,7 +137,7 @@ const TrackOrder = () => {
                     <div className="contact-methods">
                         <div className="contact-method">
                             <i className="fas fa-envelope"></i>
-                            <p>Email: support@glowaura.com</p>
+                            <p>Email: support@glowproducts.com</p>
                         </div>
                         <div className="contact-method">
                             <i className="fas fa-phone"></i>
@@ -150,4 +150,4 @@ const TrackOrder = () => {
     );
 };
 
-export default TrackOrder; 
+export default TrackOrder;

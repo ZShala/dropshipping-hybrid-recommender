@@ -159,12 +159,12 @@ const ProductDetail = () => {
                                 }}
                             />
                             <div className="amazon-badge">
-                                <i className="fab fa-amazon"></i>
-                                Amazon's Choice
+                                <i className="fas fa-shield-alt"></i>
+                                Top Pick
                             </div>
                             <div className="prime-badge">
-                                <i className="fab fa-amazon"></i>
-                                Prime
+                                <i className="fas fa-truck"></i>
+                                Express
                             </div>
                         </div>
                         <div className="product-badges">
@@ -178,7 +178,7 @@ const ProductDetail = () => {
                             </div>
                             <div className="badge shipping">
                                 <i className="fas fa-truck"></i>
-                                Prime Shipping
+                                Express Shipping
                             </div>
                         </div>
                     </div>
@@ -217,8 +217,8 @@ const ProductDetail = () => {
                                 </div>
                             </div>
                             <div className="prime-delivery">
-                                <i className="fab fa-amazon"></i>
-                                FREE Prime Delivery
+                                <i className="fas fa-truck"></i>
+                                FREE Express Delivery
                             </div>
                         </div>
 
@@ -233,7 +233,7 @@ const ProductDetail = () => {
                             <div className="delivery-options">
                                 <div className="option">
                                     <i className="fas fa-box"></i>
-                                    Ships from Amazon
+                                    Ships from our warehouse
                                 </div>
                                 <div className="option">
                                     <i className="fas fa-map-marker-alt"></i>
@@ -275,11 +275,11 @@ const ProductDetail = () => {
                                 </li>
                                 <li>
                                     <i className="fas fa-check"></i>
-                                    Authentic Amazon Item
+                                    Authentic Product
                                 </li>
                                 <li>
                                     <i className="fas fa-check"></i>
-                                    Fast Prime Shipping
+                                    Fast Express Shipping
                                 </li>
                                 <li>
                                     <i className="fas fa-check"></i>
@@ -306,7 +306,7 @@ const ProductDetail = () => {
                             <div className="badge">
                                 <i className="fas fa-box-open"></i>
                                 <div>
-                                    <h4>Amazon Fulfilled</h4>
+                                    <h4>Fast Fulfilment</h4>
                                     <p>Direct from warehouse</p>
                                 </div>
                             </div>

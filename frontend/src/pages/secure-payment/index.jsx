@@ -1,17 +1,17 @@
 import React from 'react';
 import './secure-payment.styles.scss';
 import SEO from '../../components/seo';
-import { FaLock, FaCreditCard, FaShieldAlt, FaAmazon, FaPaypal, FaApplePay, FaGooglePay } from 'react-icons/fa';
+import { FaLock, FaCreditCard, FaShieldAlt, FaPaypal, FaApplePay, FaGooglePay } from 'react-icons/fa';
 import { SiVisa, SiMastercard, SiAmericanexpress } from 'react-icons/si';
 
 const SecurePayment = () => {
     return (
         <div className="secure-payment-page">
-            <SEO 
+            <SEO
                 title="Secure Payment | Your Beauty Products"
                 description="Learn about our secure payment methods and transaction protection."
             />
-            
+
             <div className="secure-payment-container">
                 <div className="hero-section">
                     <FaLock className="security-icon" />
@@ -47,8 +47,8 @@ const SecurePayment = () => {
                             <span>Google Pay</span>
                         </div>
                         <div className="method-card">
-                            <FaAmazon />
-                            <span>Amazon Pay</span>
+                            <FaCreditCard />
+                            <span>Card Payment</span>
                         </div>
                     </div>
                 </div>
@@ -72,9 +72,9 @@ const SecurePayment = () => {
                             <p>PCI DSS compliant payment processing</p>
                         </div>
                         <div className="feature-card">
-                            <FaAmazon />
-                            <h3>Amazon Security</h3>
-                            <p>Protected by Amazon's secure infrastructure</p>
+                            <FaShieldAlt />
+                            <h3>Payment Security</h3>
+                            <p>Protected by industry-standard secure infrastructure</p>
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ const SecurePayment = () => {
                     <div className="contact-methods">
                         <div className="contact-method">
                             <i className="fas fa-envelope"></i>
-                            <p>Email: payments@glowaura.com</p>
+                            <p>Email: payments@glowproducts.com</p>
                         </div>
                         <div className="contact-method">
                             <i className="fas fa-phone"></i>
@@ -167,4 +167,4 @@ const SecurePayment = () => {
     );
 };
 
-export default SecurePayment; 
+export default SecurePayment;

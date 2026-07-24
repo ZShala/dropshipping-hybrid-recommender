@@ -41,11 +41,12 @@ yarn-error.log*
 .pytest_cache/
 __pycache__/
 
-# Dataset files
-*.csv
+# Dataset files (exclude large raw dataset by name; small result CSVs are allowed)
+data/*.csv
+Amazon_Beauty_Recommendation.csv
+amazon-beauty-recommendation.csv
 *.xlsx
 *.xls
-!amazon-beauty-recommendation.csv  # Përjashto dataset-in kryesor
 
 # OS generated files
 .DS_Store
@@ -55,10 +56,6 @@ __pycache__/
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# Development process files
-development_process/
-thesis_documentation/
 
 # Testing
 coverage/
@@ -70,3 +67,6 @@ backend/venv/
 backend/newenv/
 backend/__pycache__
 backend/amazon-beauty-recommendation.csv
+
+# Revision working notes — internal, do not publish
+backend/experiments/results/FINDINGS.md

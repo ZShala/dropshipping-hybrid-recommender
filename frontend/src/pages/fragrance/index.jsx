@@ -7,7 +7,7 @@ const Fragrance = () => {
         <>
             <SEO 
                 title="Fragrances | Luxury Perfumes Collection"
-                description="Explore our collection of luxury perfumes and fragrances from Amazon. Shop designer scents with authentic product guarantee and Prime shipping."
+                description="Explore our curated collection of luxury perfumes and fragrances. Shop designer scents with authentic product guarantee and Express shipping."
             />
             <div>
                 <CategoryProducts categoryType="fragrance" />

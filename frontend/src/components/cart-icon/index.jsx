@@ -7,7 +7,7 @@ const CartIcon = () => {
     const [itemCount, setItemCount] = useState(0);
 
     useEffect(() => {
-        // Funksioni për të përditësuar numrin e produkteve
+        // Function to update the product count
         const updateCartCount = () => {
             try {
                 const cart = JSON.parse(localStorage.getItem('cart') || '[]');
@@ -19,10 +19,10 @@ const CartIcon = () => {
             }
         };
 
-        // Përditëso numrin fillestar
+        // Update the initial count
         updateCartCount();
 
-        // Dëgjo për ndryshime në localStorage
+        // Listen for changes in localStorage
         const handleStorageChange = (e) => {
             if (e.key === 'cart') {
                 updateCartCount();
@@ -31,7 +31,7 @@ const CartIcon = () => {
 
         window.addEventListener('storage', handleStorageChange);
         
-        // Dëgjo për një event custom për përditësime lokale
+        // Listen for a custom event for local updates
         window.addEventListener('cartUpdated', updateCartCount);
 
         return () => {

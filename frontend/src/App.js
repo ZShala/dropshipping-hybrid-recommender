@@ -27,7 +27,7 @@ import Support from './pages/support';
 
 const PromoBanner = () => {
   const promoItems = [
-    { icon: <FaTruck />, text: "FREE Prime Shipping on Orders $25+" },
+    { icon: <FaTruck />, text: "FREE Express Shipping on Orders $25+" },
     { icon: <FaGift />, text: "New Customers: Get 10% OFF" }
   ];
 

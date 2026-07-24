@@ -20,7 +20,6 @@ const ProductCard = ({
     const defaultImage = "https://via.placeholder.com/300x300?text=Beauty+Product";
     
     const handleImageError = () => {
-        console.log('Image failed to load:', product.image_url);
         setImageError(true);
     };
 
@@ -78,7 +77,6 @@ const ProductCard = ({
                     </div>
                 </Link>
                 <div className="product-info">
-                    {console.log('product', product)}
                     <h3>{product.ProductTitle}</h3>
                     <div className="rating">
                         <span>★</span> {product.Rating}
@@ -99,7 +97,7 @@ const ProductCard = ({
                         </div>
                     )}
 
-                    {/* Trego scores të ndryshme bazuar në kontekstin */}
+                    {/* Show different scores based on the context */}
                     {similarityScore && (
                         <div className="similarity-info">
                             <span className="similarity-score">
@@ -112,7 +110,7 @@ const ProductCard = ({
                     )}
                     {trendingScore && (
                         <div className="trending-score">
-                            Trending Score: {trendingScore (2)}
+                            Trending Score: {Number(trendingScore).toFixed(2)}
                         </div>
                     )}
                     {recommendationReason && (
@@ -145,7 +143,7 @@ const ProductCard = ({
             </div>
             
             <Toast 
-                message="Produkti u shtua në shportë!"
+                message="Product added to cart!"
                 isVisible={showToast}
                 onClose={() => setShowToast(false)}
             />

@@ -6,11 +6,11 @@ import { FaTruck, FaClock, FaGlobe, FaShieldAlt } from 'react-icons/fa';
 const Shipping = () => {
     return (
         <div className="shipping-page">
-            <SEO 
+            <SEO
                 title="Shipping Information | Your Beauty Products"
                 description="Learn about our shipping methods, delivery times, and costs."
             />
-            
+
             <div className="shipping-container">
                 <h1>Shipping Information</h1>
                 <div className="last-updated">Last Updated: March 15, 2024</div>
@@ -18,7 +18,7 @@ const Shipping = () => {
                 <div className="shipping-highlights">
                     <div className="highlight-card">
                         <FaTruck />
-                        <h3>Free Prime Shipping</h3>
+                        <h3>Free Express Shipping</h3>
                         <p>On orders over $25</p>
                     </div>
                     <div className="highlight-card">
@@ -42,7 +42,7 @@ const Shipping = () => {
                     <h2>Domestic Shipping</h2>
                     <div className="shipping-options">
                         <div className="option">
-                            <h3>Prime Shipping</h3>
+                            <h3>Express Shipping</h3>
                             <ul>
                                 <li>Free on orders over $25</li>
                                 <li>2-5 business days delivery</li>
@@ -114,7 +114,7 @@ const Shipping = () => {
                     <div className="contact-methods">
                         <div className="contact-method">
                             <i className="fas fa-envelope"></i>
-                            <p>Email: shipping@glowaura.com</p>
+                            <p>Email: shipping@glowproducts.com</p>
                         </div>
                         <div className="contact-method">
                             <i className="fas fa-phone"></i>
@@ -127,4 +127,4 @@ const Shipping = () => {
     );
 };
 
-export default Shipping; 
+export default Shipping;
