@@ -116,9 +116,12 @@ def main():
     stats_json = json.load(open(RESULTS_DIR / "dataset_stats.json"))
     all_systems = list(summaries[0]["systems"].keys())
 
-    # best hybrid on the sensitivity grid by mean NDCG@10
+    # Configuration reported in the paper. The grid optimum by mean NDCG@10 is
+    # 0/80/20, but it is within noise of 10/70/20 (delta = 0.00002), and the
+    # latter keeps a content weight for the cold-item fallback, so the paper
+    # reports 10/70/20 and the tables must match it.
     hybrid_names = [s for s in all_systems if re.match(r"Hybrid \d+/\d+/\d+", s)]
-    best_hybrid = max(hybrid_names, key=lambda s: mean_std(summaries, s, "NDCG@10")[0])
+    best_hybrid = "Hybrid 10/70/20"
 
     out = ["# Offline Experiment Results",
            f"\n{n_seeds} independent runs; each run evaluates a random sample of "
