@@ -1,0 +1,16 @@
+{
+  "n_items": 23838,
+  "cf_unreachable": 4,
+  "cf_unreachable_pct": 0.02,
+  "no_train_interaction_at_all": 1,
+  "interactions_but_no_positives": 3,
+  "trend_ineligible": 7500,
+  "trend_ineligible_pct": 31.46,
+  "content_scoreable": 23838,
+  "content_scoreable_pct": 100.0,
+  "only_content_can_rank": 4,
+  "only_content_can_rank_pct": 0.02,
+  "test_positives": 45279,
+  "test_positives_on_cf_unreachable_items": 29,
+  "test_positives_on_cf_unreachable_items_pct": 0.06
+}

@@ -38,12 +38,16 @@ python -m experiments.run_experiments --seeds 5 --users 5000
 
 # 4. aggregate into publication tables + significance tests
 python -m experiments.make_tables
+
+# 5. catalogue reachability per component (the fallback figures in the paper)
+python -m experiments.analyse_fallback
 ```
 
 Outputs land in `backend/experiments/results/`:
 `tables.md` (all paper tables), `sensitivity_grid.csv`,
-`summary_seed*.json`, `per_user_seed*.npz`, `dataset_stats.json`, and
-`live_performance.md` (from part B). Protocol details: `backend/experiments/README.md`.
+`summary_seed*.json`, `per_user_seed*.npz`, `dataset_stats.json`,
+`fallback_stats.json`, and `live_performance.md` (from part B).
+Protocol details: `backend/experiments/README.md`.
 
 ---
 
@@ -51,9 +55,9 @@ Outputs land in `backend/experiments/results/`:
 
 ### B1. One-time database setup
 
-MySQL must be running on `localhost:3306`. The code's default connection is
-`root` / `mysqlZ97*` / database `dataset_db`; to use different credentials,
-set the environment variable instead (recognised by all backend code):
+MySQL must be running on `localhost:3306`. The code falls back to a local
+`root` account on database `dataset_db`; set `DATABASE_URL` to point at your
+own credentials instead (recognised by all backend code):
 
 ```bash
 # PowerShell:  $env:DATABASE_URL = "mysql+mysqlconnector://USER:PASS@localhost/dataset_db"

@@ -23,7 +23,11 @@ major revision).
   (n = 25,000), Holm-Bonferroni corrected.
 - **Hyperparameters**: tuned on a validation split carved from the training
   portion (never the test set): ItemKNN k = 200; PureSVD f = 256;
-  BPR f = 64, lr = 0.05, 300 iterations. See `results/tuning.json`.
+  BPR f = 128, lr = 0.05, 300 iterations. See `results/tuning.json`.
+- **Reported hybrid**: the tables report the configuration used in the paper,
+  10/70/20 (content/CF/trend). The grid maximum is 0/80/20, but the two are
+  statistically indistinguishable (Δ NDCG@10 = 0.00002) and 10/70/20 retains a
+  content weight for the cold-item fallback, so `make_tables.py` pins it.
 
 ## Models
 
@@ -44,6 +48,7 @@ cd backend
 python -m experiments.run_experiments --tune       # hyperparameter search (validation split)
 python -m experiments.run_experiments --seeds 5 --users 5000
 python -m experiments.make_tables                  # aggregate -> results/tables.md
+python -m experiments.analyse_fallback             # catalogue reachability per component
 ```
 
 Requires: `pandas`, `numpy`, `scipy`, `scikit-learn`, `implicit`
@@ -51,4 +56,6 @@ Requires: `pandas`, `numpy`, `scipy`, `scikit-learn`, `implicit`
 
 Outputs in `results/`: `dataset_stats.json`, `tuning.json`,
 `summary_seed*.json`, `per_user_seed*.npz` (per-user metric arrays for
-significance testing), `tables.md`, `sensitivity_grid.csv`.
+significance testing), `tables.md`, `sensitivity_grid.csv`,
+`fallback_stats.json` (how much of the catalogue each component can rank),
+and `FINDINGS.md` (dated working notes).
