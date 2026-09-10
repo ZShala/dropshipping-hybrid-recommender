@@ -1,0 +1,163 @@
+{
+  "interactions": 1348246,
+  "items": 23838,
+  "users": 883753,
+  "observed_span_days": 5327.0,
+  "observed_span_years": 14.58,
+  "first_interaction": "1999-12-22",
+  "last_interaction": "2014-07-23",
+  "windows": [
+    {
+      "window": 1,
+      "start": "1999-12-22",
+      "days": 4273.0,
+      "interactions": 168339,
+      "active_items": 14011,
+      "new_items": 14011,
+      "new_items_pct": 100.0,
+      "last_seen_here": 72,
+      "last_seen_here_pct": 0.5,
+      "interactions_on_new_items_pct": 100.0
+    },
+    {
+      "window": 2,
+      "start": "2011-09-03",
+      "days": 410.0,
+      "interactions": 168537,
+      "active_items": 18460,
+      "new_items": 5150,
+      "new_items_pct": 27.9,
+      "last_seen_here": 54,
+      "last_seen_here_pct": 0.3,
+      "interactions_on_new_items_pct": 20.7
+    },
+    {
+      "window": 3,
+      "start": "2012-10-17",
+      "days": 141.0,
+      "interactions": 168236,
+      "active_items": 20124,
+      "new_items": 2107,
+      "new_items_pct": 10.5,
+      "last_seen_here": 87,
+      "last_seen_here_pct": 0.4,
+      "interactions_on_new_items_pct": 7.6
+    },
+    {
+      "window": 4,
+      "start": "2013-03-07",
+      "days": 114.0,
+      "interactions": 168960,
+      "active_items": 20810,
+      "new_items": 989,
+      "new_items_pct": 4.8,
+      "last_seen_here": 118,
+      "last_seen_here_pct": 0.6,
+      "interactions_on_new_items_pct": 3.6
+    },
+    {
+      "window": 5,
+      "start": "2013-06-29",
+      "days": 116.0,
+      "interactions": 167650,
+      "active_items": 21203,
+      "new_items": 623,
+      "new_items_pct": 2.9,
+      "last_seen_here": 225,
+      "last_seen_here_pct": 1.1,
+      "interactions_on_new_items_pct": 2.3
+    },
+    {
+      "window": 6,
+      "start": "2013-10-23",
+      "days": 100.0,
+      "interactions": 168852,
+      "active_items": 21291,
+      "new_items": 499,
+      "new_items_pct": 2.3,
+      "last_seen_here": 643,
+      "last_seen_here_pct": 3.0,
+      "interactions_on_new_items_pct": 2.4
+    },
+    {
+      "window": 7,
+      "start": "2014-01-31",
+      "days": 85.0,
+      "interactions": 168023,
+      "active_items": 21116,
+      "new_items": 339,
+      "new_items_pct": 1.6,
+      "last_seen_here": 1904,
+      "last_seen_here_pct": 9.0,
+      "interactions_on_new_items_pct": 3.1
+    },
+    {
+      "window": 8,
+      "start": "2014-04-26",
+      "days": 88.0,
+      "interactions": 169649,
+      "active_items": 20735,
+      "new_items": 120,
+      "new_items_pct": 0.6,
+      "last_seen_here": null,
+      "last_seen_here_pct": null,
+      "interactions_on_new_items_pct": 3.2
+    }
+  ],
+  "mean_new_items_pct_steady": 7.2,
+  "mean_interactions_on_new_items_pct_steady": 6.1,
+  "mean_exit_pct_steady": 2.4,
+  "item_lifespan_days": {
+    "median": 1186.0,
+    "mean": 1368.6,
+    "p25": 712.0,
+    "p75": 1926.0,
+    "single_day_items_pct": 0.0,
+    "under_90_days_pct": 0.7
+  },
+  "final_window": {
+    "interactions": 169649,
+    "active_items": 20735,
+    "items_first_seen_here": 120,
+    "items_first_seen_here_pct": 0.6,
+    "interactions_on_such_items": 5390,
+    "interactions_on_such_items_pct": 3.2,
+    "positives_on_such_items": 4792,
+    "positives_on_such_items_pct": 3.6
+  },
+  "metadata": {
+    "product_type_present_pct": 100.0,
+    "distinct_product_types": 22,
+    "median_items_per_type": 525,
+    "url_slug_present_pct": 81.1,
+    "slug_tokens_median": 5,
+    "slug_tokens_p10": 0,
+    "slug_tokens_under_5_pct": 19.6,
+    "note": "the content model tokenises the URL slug plus the product type; no description, brand, price or image field exists in this dataset"
+  },
+  "slug_reuse_artefact": {
+    "items_with_slug": 19334,
+    "distinct_slugs": 844,
+    "slugs_used_by_more_than_one_item": 788,
+    "items_sharing_a_slug": 19278,
+    "items_sharing_a_slug_pct": 99.7,
+    "largest_group": 156,
+    "interpretation": "metadata defect, not catalogue duplication; real listing duplication is not measurable here"
+  },
+  "concentration": {
+    "gini_all_interactions": 0.497,
+    "gini_positives": 0.507,
+    "interaction_share_top_1pct_items": 12.7,
+    "interaction_share_top_10pct_items": 42.4,
+    "items_covering_half_of_interactions": 3458,
+    "median_interactions_per_item": 31
+  },
+  "not_measurable": [
+    "supplier lead time and stockout frequency",
+    "delayed fulfilment and its effect on repeat purchase",
+    "cart abandonment",
+    "product margin and price volatility",
+    "returns and refunds",
+    "session or click sequence (ratings only, no browsing log)"
+  ]
+}

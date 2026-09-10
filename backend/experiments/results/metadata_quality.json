@@ -1,0 +1,177 @@
+{
+  "url_audit": {
+    "items": 23838,
+    "url_with_parseable_asin_pct": 82.2,
+    "productid_matches_own_url_asin_pct": 0.0,
+    "distinct_url_asins": 860,
+    "distinct_slugs": 844,
+    "items_without_slug": 4504,
+    "items_without_slug_pct": 18.9,
+    "items_per_slug_median": 15.0,
+    "items_per_slug_max": 156,
+    "product_type_coverage_pct": 100.0,
+    "distinct_product_types": 22,
+    "distinct_slugs_per_type_min": 11,
+    "distinct_slugs_per_type_max": 61,
+    "note": "no ProductId matches the ASIN in its own URL; the URL column was evidently joined to the interaction rows independently of item identity"
+  },
+  "degeneracy": {
+    "type+slug": {
+      "distinct_content_vectors": 877,
+      "distinct_content_vectors_pct": 3.7,
+      "empty_vectors": 0,
+      "mean_indistinguishable_group_size": 141.8,
+      "median_indistinguishable_group_size": 51.0,
+      "largest_indistinguishable_group": 1083
+    },
+    "type": {
+      "distinct_content_vectors": 22,
+      "distinct_content_vectors_pct": 0.1,
+      "empty_vectors": 0,
+      "mean_indistinguishable_group_size": 2994.4,
+      "median_indistinguishable_group_size": 2353.0,
+      "largest_indistinguishable_group": 5993
+    },
+    "slug": {
+      "distinct_content_vectors": 844,
+      "distinct_content_vectors_pct": 3.5,
+      "empty_vectors": 4504,
+      "mean_indistinguishable_group_size": 889.2,
+      "median_indistinguishable_group_size": 51.0,
+      "largest_indistinguishable_group": 4504
+    }
+  },
+  "systems": {
+    "Trend (popularity)": {
+      "NDCG@10": 0.006829293819527432,
+      "NDCG@10_sd": 0.000648273783412453,
+      "HR@10": 0.022,
+      "HR@10_sd": 0.0017753872816937716,
+      "Coverage": 0.0005537377296753083
+    },
+    "ItemKNN": {
+      "NDCG@10": 0.04181099255593375,
+      "NDCG@10_sd": 0.0013025143857690212,
+      "HR@10": 0.091,
+      "HR@10_sd": 0.0019057806799314529,
+      "Coverage": 0.5598372346673378
+    },
+    "Content [type+slug]": {
+      "NDCG@10": 0.0011760023838110804,
+      "NDCG@10_sd": 0.00022875011655732516,
+      "HR@10": 0.0044399999999999995,
+      "HR@10_sd": 0.0007199999999999999,
+      "Coverage": 0.6461280308750734
+    },
+    "Content [type]": {
+      "NDCG@10": 0.00047601257783127246,
+      "NDCG@10_sd": 9.985920919371341e-05,
+      "HR@10": 0.0016399999999999997,
+      "HR@10_sd": 0.00036660605559646716,
+      "Coverage": 0.2969376625555835
+    },
+    "Content [slug]": {
+      "NDCG@10": 0.0003888259080795149,
+      "NDCG@10_sd": 8.759027729722204e-05,
+      "HR@10": 0.0012799999999999999,
+      "HR@10_sd": 0.0001600000000000001,
+      "Coverage": 0.6192549710546187
+    },
+    "Hybrid 10/70/20 [type+slug]": {
+      "NDCG@10": 0.04245661162185142,
+      "NDCG@10_sd": 0.0012553881779581192,
+      "HR@10": 0.09215999999999999,
+      "HR@10_sd": 0.0025279240494919925,
+      "Coverage": 0.5450457253125262
+    },
+    "Hybrid 10/70/20 [type]": {
+      "NDCG@10": 0.0425272364878709,
+      "NDCG@10_sd": 0.0010823208766994033,
+      "HR@10": 0.09368,
+      "HR@10_sd": 0.0022076231562474596,
+      "Coverage": 0.5456665827670107
+    },
+    "Hybrid 10/70/20 [slug]": {
+      "NDCG@10": 0.04191809052219382,
+      "NDCG@10_sd": 0.0012716240284861896,
+      "HR@10": 0.09244,
+      "HR@10_sd": 0.0029890466707631056,
+      "Coverage": 0.5425455155633861
+    }
+  },
+  "h2_retest": [
+    {
+      "feature_set": "type+slug",
+      "popularity_ndcg": 0.006829293819527431,
+      "content_ndcg": 0.0011760023838110804,
+      "popularity_over_content": 5.81,
+      "wilcoxon_W": 28826.0,
+      "wilcoxon_p": 4.2856437680206113e-60,
+      "popularity_wins": 549,
+      "content_wins": 110,
+      "ties": 24341
+    },
+    {
+      "feature_set": "type",
+      "popularity_ndcg": 0.006829293819527431,
+      "content_ndcg": 0.00047601257783127246,
+      "popularity_over_content": 14.35,
+      "wilcoxon_W": 11034.5,
+      "wilcoxon_p": 9.818079215267171e-76,
+      "popularity_wins": 550,
+      "content_wins": 41,
+      "ties": 24409
+    },
+    {
+      "feature_set": "slug",
+      "popularity_ndcg": 0.006829293819527431,
+      "content_ndcg": 0.0003888259080795149,
+      "popularity_over_content": 17.56,
+      "wilcoxon_W": 7976.5,
+      "wilcoxon_p": 4.753554914491324e-80,
+      "popularity_wins": 550,
+      "content_wins": 32,
+      "ties": 24418
+    }
+  ],
+  "hybrid_gain": [
+    {
+      "feature_set": "type+slug",
+      "hybrid_ndcg": 0.04245661162185144,
+      "itemknn_ndcg": 0.041810992555933756,
+      "delta": 0.0006456190659176794,
+      "relative_pct": 1.54,
+      "cohens_dz": 0.0175,
+      "wilcoxon_p": 0.012340570974175537,
+      "wins": 631,
+      "losses": 605,
+      "ties": 23764
+    },
+    {
+      "feature_set": "type",
+      "hybrid_ndcg": 0.04252723648787089,
+      "itemknn_ndcg": 0.041810992555933756,
+      "delta": 0.0007162439319371523,
+      "relative_pct": 1.71,
+      "cohens_dz": 0.016,
+      "wilcoxon_p": 0.0012214777296647467,
+      "wins": 828,
+      "losses": 630,
+      "ties": 23542
+    },
+    {
+      "feature_set": "slug",
+      "hybrid_ndcg": 0.041918090522193814,
+      "itemknn_ndcg": 0.041810992555933756,
+      "delta": 0.00010709796626006858,
+      "relative_pct": 0.26,
+      "cohens_dz": 0.0031,
+      "wilcoxon_p": 0.7713269901511652,
+      "wins": 472,
+      "losses": 533,
+      "ties": 23995
+    }
+  ],
+  "seeds": 5,
+  "users_per_seed": 5000
+}

@@ -41,12 +41,23 @@ python -m experiments.make_tables
 
 # 5. catalogue reachability per component (the fallback figures in the paper)
 python -m experiments.analyse_fallback
+
+# 6. second-revision analyses (each writes one JSON to results/)
+python -m experiments.analyse_effect_sizes        # effect sizes behind Practical Significance
+python -m experiments.analyse_ecology             # catalogue turnover and item lifespan
+python -m experiments.analyse_metadata_quality    # URL-field audit and the H2 re-test
+python -m experiments.analyse_sparsity --seeds 3  # Table 6  (~35 min)
+python -m experiments.analyse_churn    --seeds 3  # Table 7  (~10 min)
+python -m experiments.analyse_protocol --seeds 3  # Table 8  (~12 min)
 ```
 
 Outputs land in `backend/experiments/results/`:
 `tables.md` (all paper tables), `sensitivity_grid.csv`,
 `summary_seed*.json`, `per_user_seed*.npz`, `dataset_stats.json`,
-`fallback_stats.json`, and `live_performance.md` (from part B).
+`fallback_stats.json`, `live_performance.md` (from part B), and the six
+second-revision files: `effect_sizes.json`, `ecology_stats.json`,
+`metadata_quality.json`, `sparsity_sweep.json`, `churn_stress.json` and
+`protocol_sensitivity.json`.
 Protocol details: `backend/experiments/README.md`.
 
 ---

@@ -51,6 +51,34 @@ python -m experiments.make_tables                  # aggregate -> results/tables
 python -m experiments.analyse_fallback             # catalogue reachability per component
 ```
 
+### Second-revision analyses
+
+Each answers a specific point from the second review and writes one JSON to
+`results/`. They read the outputs of the main run above, so run that first.
+
+```bash
+python -m experiments.analyse_effect_sizes         # -> effect_sizes.json
+python -m experiments.analyse_ecology              # -> ecology_stats.json
+python -m experiments.analyse_metadata_quality     # -> metadata_quality.json
+python -m experiments.analyse_sparsity  --seeds 3  # -> sparsity_sweep.json   (~35 min)
+python -m experiments.analyse_churn     --seeds 3  # -> churn_stress.json     (~10 min)
+python -m experiments.analyse_protocol  --seeds 3  # -> protocol_sensitivity.json (~12 min)
+```
+
+| Script | Question it answers | Feeds |
+|---|---|---|
+| `analyse_effect_sizes` | Is the hybrid's edge over ItemKNN large enough to matter? Cohen's dz, rank-biserial, bootstrap CI, win/tie/loss, and an operational rate | Practical Significance |
+| `analyse_sparsity` | How does the model ordering change as data thins? Random, per-user and per-item thinning, plus a no-refit stratification by user profile length | Table 6 |
+| `analyse_churn` | Does the content component actually rescue new products? Removes all history from a share of items and scores the cold ones separately | Table 7 |
+| `analyse_protocol` | Do the results survive the two arbitrary constants (relevance threshold, eligibility floor)? | Table 8 |
+| `analyse_ecology` | How far does the dataset reproduce dropshipping conditions? Catalogue turnover, item lifespan, demand concentration | Dropshipping-Specific Conditions |
+| `analyse_metadata_quality` | The dataset's `URL` column does not describe the row's item; this quantifies the resulting degeneracy and re-tests H2 on the reliable field alone | Preprocessing, Results |
+
+The three sweeps depend on `load_dataset(thin=...)` in `data.py`, which
+removes training interactions before any derived quantity is computed, so item
+popularity and the Eq. 4 trend gate stay consistent with what remains. The
+test set is never touched.
+
 Requires: `pandas`, `numpy`, `scipy`, `scikit-learn`, `implicit`
 (Python 3.10; no database needed — runs directly from the CSV).
 
@@ -58,4 +86,5 @@ Outputs in `results/`: `dataset_stats.json`, `tuning.json`,
 `summary_seed*.json`, `per_user_seed*.npz` (per-user metric arrays for
 significance testing), `tables.md`, `sensitivity_grid.csv`,
 `fallback_stats.json` (how much of the catalogue each component can rank),
-and `FINDINGS.md` (dated working notes).
+the six second-revision files listed above, and `FINDINGS.md` (dated working
+notes, not tracked).
